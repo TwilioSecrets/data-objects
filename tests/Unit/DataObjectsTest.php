@@ -8,7 +8,10 @@ require_once 'vendor/autoload.php';
 class DataObjectsTest extends TestCase {
 
 	public function testBasicAssertion(): void {
-		//
+		$this->assertInstanceOf(BaseDataObject::class, new TestDataObject(array(
+			'name' => 'Adam McGurk',
+			'id' => 1234
+		)));
 	}
 
 }
