@@ -1,0 +1,22 @@
+{
+    "name": "twilio-playground/data-objects",
+    "description": "The basic Twilio Playground Data Object library.",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability":"stable",
+    "authors": [
+        {
+            "name": "Adam McGurk",
+            "email": "eldermcgurk@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TwilioPlayground\\": "src/TwilioPlayground/"
+        }
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}
