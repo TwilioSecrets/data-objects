@@ -35,7 +35,9 @@ class DataObjectsTest extends TestCase {
 	}
 
 	function testTheArrayProps(): void {
-		$this->assertTrue(true);
+		$array_data_object = $this->test_data_object->to_array();
+		$this->assertEquals($array_data_object['id'], self::$id);
+		$this->assertEquals($array_data_object['name'], self::$name);
 	}
 
 }

@@ -17,7 +17,7 @@ abstract class BaseDataObject {
 	 * @return array of the object variables
 	 */
 	function to_array(): array {
-		\get_object_vars($this);
+		return \get_object_vars($this);
 	}
 
 	/**
