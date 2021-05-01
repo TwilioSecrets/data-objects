@@ -12,7 +12,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "TwilioPlayground\\": "src/TwilioPlayground/"
+            "TwilioPlayground\\": "src/TwilioPlayground/",
+            "TwilioPlaygroundTest\\": "tests/Unit/TwilioPlaygroundTest/"
         }
     },
 
