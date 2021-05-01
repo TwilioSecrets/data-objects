@@ -7,11 +7,19 @@ require_once 'vendor/autoload.php';
 
 class DataObjectsTest extends TestCase {
 
+	private $test_data_object;
+	private static $name = 'Adam McGurk';
+	private static $id = 1234;
+
+	function setUp(): void {
+		$this->test_data_object = new TestDataObject(array(
+			'name' => self::$name,
+			'id' => self::$id
+		));
+	}
+
 	function testBasicAssertion(): void {
-		$this->assertInstanceOf(BaseDataObject::class, new TestDataObject(array(
-			'name' => 'Adam McGurk',
-			'id' => 1234
-		)));
+		$this->assertInstanceOf(BaseDataObject::class, $this->test_data_object);
 	}
 
 	function testThrowsOnEmpty(): void {
@@ -24,6 +32,10 @@ class DataObjectsTest extends TestCase {
 		new TestDataObject(array(
 			'doesnotexist' => 'This prop shouldn\'t exist'
 		));
+	}
+
+	function testTheArrayProps(): void {
+		$this->assertTrue(true);
 	}
 
 }
