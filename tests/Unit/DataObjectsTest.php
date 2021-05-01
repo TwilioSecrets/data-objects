@@ -14,4 +14,9 @@ class DataObjectsTest extends TestCase {
 		)));
 	}
 
+	public function testThrowsOnEmpty(): void {
+		$this->expectException(InvalidArgumentException::class);
+		new TestDataObject(array());
+	}
+
 }

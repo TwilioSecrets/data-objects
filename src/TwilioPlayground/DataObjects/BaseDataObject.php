@@ -27,13 +27,13 @@ abstract class BaseDataObject {
 	 */
 	private function populate(array $params): void {
 		if (empty($params)) {
-			throw new InvalidArgumentException('You must provide valid parameters with at least one value.');
+			throw new \InvalidArgumentException('You must provide valid parameters with at least one value.');
 		}
 		foreach ($params as $key => $value) {
 			if (\property_exists($this, $key)) {
 				$this->$key = $value;
 			} else {
-				throw new UnexpectedValueException("The value $key isn't configured on this Data Object");
+				throw new \UnexpectedValueException("The value $key isn't configured on this Data Object");
 			}
 		}
 	}
