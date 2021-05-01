@@ -19,4 +19,11 @@ class DataObjectsTest extends TestCase {
 		new TestDataObject(array());
 	}
 
+	public function testThrowsOnWrongParamsSent(): void {
+		$this->expectException(UnexpectedValueException::class);
+		new TestDataObject(array(
+			'doesnotexist' => 'This prop shouldn\'t exist'
+		));
+	}
+
 }
